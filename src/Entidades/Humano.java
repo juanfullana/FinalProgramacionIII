@@ -12,18 +12,14 @@ public class Humano extends Criatura {
         this.id = idCounter++;
     }
 
+    // Métodos getter
+    public int getId() {
+        return id;
+    }
+
     // Método para generar nombres en orden
     private static String generarNombre() {
         int index = idCounter - 1;
-        if (index >= 0 && index < nombres.length) {
-            return nombres[index];
-        } else {
-            return "HumanoDesconocido";
-        }
-    }
-
-    // Método getter para el ID
-    public int getId() {
-        return id;
+        return nombres[index];
     }
 }

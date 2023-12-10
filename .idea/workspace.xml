@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="286736d0-c7bf-49b8-92af-8f0db217bf49" name="Changes" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Criatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Criatura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Humano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Humano.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702221480148</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="a">
+      <option name="closed" value="true" />
+      <created>1702222150994</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702222150994</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
