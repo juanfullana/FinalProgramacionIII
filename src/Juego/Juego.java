@@ -9,8 +9,8 @@ import Entidades.Maquina;
 import java.util.*;
 
 public class Juego {
-    private Jugador jugador;
-    private Maquina maquina;
+    private final Jugador jugador;
+    private final Maquina maquina;
     int rondas = 0;
     int victoriasJugador = 0;
     int victoriasMaquina = 0;
@@ -38,28 +38,30 @@ public class Juego {
         System.out.println("¡Bienvenido al juego de cartas de criaturas!");
 
         // Crear jugador y su ejército
+        Set<String> nombresElegidosJugador = new HashSet<>();
         for (int i = 0; i < 10; i++) {
             System.out.println("Selecciona tu criatura (1: Humano, 2: Elfo, 3: Orco): ");
             int seleccionUsuario = scanner.nextInt();
-            Criatura criaturaUsuario = obtenerCriatura(seleccionUsuario, nombresHumanos, nombresElfos, nombresOrcos);
+            Criatura criaturaUsuario = obtenerCriatura(seleccionUsuario, nombresHumanos, nombresElfos, nombresOrcos, nombresElegidosJugador);
             jugador.agregarCriatura(criaturaUsuario);
             System.out.println("Criatura agregada: " + criaturaUsuario.getNombre());
         }
 
         // Crear máquina y su ejército
+        Set<String> nombresElegidosMaquina = new HashSet<>();
         for (int i = 0; i < 10; i++) {
             Random random = new Random();
             int seleccionMaquina = random.nextInt(3) + 1;
-            Criatura criaturaMaquina = obtenerCriatura(seleccionMaquina, nombresHumanos, nombresElfos, nombresOrcos);
+            Criatura criaturaMaquina = obtenerCriatura(seleccionMaquina, nombresHumanos, nombresElfos, nombresOrcos, nombresElegidosMaquina);
             maquina.agregarCriatura(criaturaMaquina);
         }
 
         // Mostrar ejércitos
         System.out.println("\nEl ejército del jugador está conformado por:");
-        jugador.getCriaturas().forEach(criatura -> System.out.println(criatura.getNombre()));
+        jugador.getCriaturas().forEach(criatura -> System.out.println(criatura.getNombre() + " (" + obtenerTipoCriatura(criatura) + ")"));
 
         System.out.println("\nEl ejército de la máquina está conformado por:");
-        maquina.getCriaturas().forEach(criatura -> System.out.println(criatura.getNombre()));
+        maquina.getCriaturas().forEach(criatura -> System.out.println(criatura.getNombre() + " (" + obtenerTipoCriatura(criatura) + ")"));
 
         // Simular combate
         while (rondas < maxRondas && victoriasJugador < 6 && victoriasMaquina < 6) {
@@ -129,26 +131,26 @@ public class Juego {
         System.out.println("Victorias de la máquina: " + victoriasMaquina);
         System.out.println("Empates: " + empates);
     }
-    private Criatura obtenerCriatura(int seleccion, List<String> nombresHumanos, List<String> nombresElfos, List<String> nombresOrcos) {
+    private Criatura obtenerCriatura(int seleccion, List<String> nombresHumanos, List<String> nombresElfos, List<String> nombresOrcos, Set<String> nombresElegidos) {
         Criatura criatura;
         String nombre;
         switch (seleccion) {
             case 1:
                 criatura = new Humano();
-                nombre = Criatura.obtenerNombreAleatorio(nombresHumanos.toArray(new String[0]));
+                nombre = obtenerNombreUnico(nombresHumanos, nombresElegidos);
                 break;
             case 2:
                 criatura = new Elfo();
-                nombre = Criatura.obtenerNombreAleatorio(nombresElfos.toArray(new String[0]));
+                nombre = obtenerNombreUnico(nombresElfos, nombresElegidos);
                 break;
             case 3:
                 criatura = new Orco();
-                nombre = Criatura.obtenerNombreAleatorio(nombresOrcos.toArray(new String[0]));
+                nombre = obtenerNombreUnico(nombresOrcos, nombresElegidos);
                 break;
             default:
                 System.out.println("Selección no válida. Seleccionando Humano por defecto.");
                 criatura = new Humano();
-                nombre = Criatura.obtenerNombreAleatorio(nombresHumanos.toArray(new String[0]));
+                nombre = obtenerNombreUnico(nombresHumanos, nombresElegidos);
         }
         criatura.setNombre(nombre);
         return criatura;
@@ -162,5 +164,16 @@ public class Juego {
         }
         // Si no hay nombres disponibles, regresar uno por defecto
         return "NombreDefault";
+    }
+    private String obtenerTipoCriatura(Criatura criatura) {
+        if (criatura instanceof Humano) {
+            return "Humano";
+        } else if (criatura instanceof Elfo) {
+            return "Elfo";
+        } else if (criatura instanceof Orco) {
+            return "Orco";
+        } else {
+            return "Desconocido";
+        }
     }
 }
