@@ -5,50 +5,89 @@ import java.util.List;
 import java.util.Random;
 
 public class Maquina {
-    private static final int NUMERO_CRIATURAS_MAQUINA = 10;
+    private static final int MAX_CRIATURAS = 10;
     private List<Criatura> criaturas;
+    private int criaturaActualIndex;
 
     public Maquina() {
         this.criaturas = new ArrayList<>();
-        inicializarEjercito();
+        this.criaturaActualIndex = 0;
+        llenarEjercitoAleatorio();
     }
 
-    private void inicializarEjercito() {
-        // Lógica para inicializar el ejército de la máquina
+    private void llenarEjercitoAleatorio() {
         Random random = new Random();
-        for (int i = 0; i < NUMERO_CRIATURAS_MAQUINA; i++) {
-            int tipoCriatura = random.nextInt(3) + 1; // 1: Humano, 2: Elfo, 3: Orco
+        List<String> nombresHumanos = List.of("Antonio", "José", "Manuel", "Francisco", "David", "Juan", "José Antonio", "Javier", "José Luis", "Daniel");
+        List<String> nombresElfos = List.of("Caranthir", "Celegorm", "Círdan", "Eldar", "Elrond", "Eru", "Fëanor", "Fingolfin", "Finrod", "Isildur");
+        List<String> nombresOrcos = List.of("Chakub", "Duffthug", "Gollik", "Zogstuf", "Rok", "Grimfang", "Rokblorggor", "Wortsnaga", "Bagul", "Naznob");
 
-            Criatura criatura;
-            switch (tipoCriatura) {
+        for (int i = 0; i < MAX_CRIATURAS; i++) {
+            int seleccionMaquina = random.nextInt(3) + 1;
+            Criatura criaturaMaquina;
+            String nombreMaquina;
+
+            switch (seleccionMaquina) {
                 case 1:
-                    criatura = new Humano();
+                    criaturaMaquina = new Humano();
+                    nombreMaquina = Criatura.obtenerNombreAleatorio(nombresHumanos.toArray(new String[0]));
                     break;
                 case 2:
-                    criatura = new Elfo();
+                    criaturaMaquina = new Elfo();
+                    nombreMaquina = Criatura.obtenerNombreAleatorio(nombresElfos.toArray(new String[0]));
                     break;
                 case 3:
-                    criatura = new Orco();
+                    criaturaMaquina = new Orco();
+                    nombreMaquina = Criatura.obtenerNombreAleatorio(nombresOrcos.toArray(new String[0]));
                     break;
                 default:
-                    criatura = new Humano();
+                    criaturaMaquina = new Humano();
+                    nombreMaquina = Criatura.obtenerNombreAleatorio(nombresHumanos.toArray(new String[0]));
             }
-            criaturas.add(criatura);
-        }
-    }
 
-    public Criatura obtenerCriaturaAleatoria() {
-        // Obtener una criatura aleatoria del ejército de la máquina
-        Random random = new Random();
-        int indice = random.nextInt(criaturas.size());
-        return criaturas.get(indice);
+            criaturaMaquina.setNombre(nombreMaquina);
+            criaturas.add(criaturaMaquina);
+        }
     }
 
     public boolean tieneCriaturas() {
         return !criaturas.isEmpty();
     }
 
-    public void eliminarCriatura(Criatura criatura) {
-        criaturas.remove(criatura);
+    public List<Criatura> getCriaturas() {
+        return criaturas;
+    }
+
+    public Criatura getCriaturaActual() {
+        if (criaturaActualIndex >= 0 && criaturaActualIndex < criaturas.size()) {
+            return criaturas.get(criaturaActualIndex);
+        } else {
+            return null;
+        }
+    }
+
+    public void siguienteCriatura() {
+        criaturaActualIndex = (criaturaActualIndex + 1) % criaturas.size();
+    }
+
+    public void eliminarCriatura() {
+        if (!criaturas.isEmpty()) {
+            criaturas.remove(0);
+        }
+    }
+
+    public void atacar(Jugador jugador) {
+        Criatura maquina = getCriaturaActual();
+        if (maquina != null) {
+            maquina.atacar(jugador.getCriaturaActual());
+        }
+    }
+
+    public boolean agregarCriatura(Criatura criatura) {
+        if (criaturas.size() < MAX_CRIATURAS) {
+            criaturas.add(criatura);
+            return true;
+        } else {
+            return false;
+        }
     }
 }

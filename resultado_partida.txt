@@ -1,0 +1,15 @@
+El ejército del usuario está conformado por: David, Isildur, Wortsnaga, Javier, Eru, Wortsnaga, David, Isildur, Naznob, Isildur
+El ejército enemigo está conformado por: Elrond, Antonio, Naznob, Elrond, Rok, Rok, Francisco, Círdan, José Luis, José Luis
+
+¡Que comiencen los combates!
+
+Detalles de las rondas:
+
+Resultado final:
+Rondas: 0
+Daño total causado por el usuario: 0
+Daño total causado por la máquina: 0
+Victorias del usuario: 4
+Victorias de la máquina: 6
+
+¡Derrota! El usuario ha sido vencido por la máquina.

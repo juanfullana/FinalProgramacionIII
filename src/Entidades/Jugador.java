@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Jugador {
-    private static final int MAX_CRIATURAS = 10;
+    protected static final int MAX_CRIATURAS = 10;
     private List<Criatura> criaturas;
     private int criaturaActualIndex;
 
@@ -46,6 +46,17 @@ public class Jugador {
         Criatura jugador = getCriaturaActual();
         if (jugador != null) {
             jugador.atacar(objetivo);
+        }
+    }
+    public void eliminarCriatura() {
+        if (!criaturas.isEmpty()) {
+            criaturas.remove(0);
+        }
+    }
+
+    public void eliminarCriaturaActual() {
+        if (!criaturas.isEmpty()) {
+            criaturas.remove(criaturaActualIndex);
         }
     }
 }

@@ -83,4 +83,8 @@ public class Criatura {
         int indice = random.nextInt(nombres.length);
         return nombres[indice];
     }
+    @Override
+    public String toString() {
+        return this.getNombre() + " - Tipo: " + this.getClass().getSimpleName() + " - Salud: " + this.getSalud();
+    }
 }
