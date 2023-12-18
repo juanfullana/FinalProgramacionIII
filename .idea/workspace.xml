@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="286736d0-c7bf-49b8-92af-8f0db217bf49" name="Changes" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Juego/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Juego/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultado_partida.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Criatura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Elfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Humano.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Jugador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Maquina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Orco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego/Juego.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Juego/SalidaManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Juan/Desktop/Programacion3"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -106,8 +116,27 @@
       <option name="project" value="LOCAL" />
       <updated>1702390815265</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="a">
+      <option name="closed" value="true" />
+      <created>1702391577860</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702391577860</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />

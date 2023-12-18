@@ -1,0 +1,22 @@
+Guerrero elegido: Paladín.
+Combate vs Ghoul
+Total de rondas: 2
+Total de daño recibido en este combate: 0
+Total de daño infligido en este combate: 51
+------------------------------
+Combate vs Esqueleto
+Total de rondas: 2
+Total de daño recibido en este combate: 0
+Total de daño infligido en este combate: 66
+------------------------------
+Combate vs Fantasma
+Total de rondas: 4
+Total de daño recibido en este combate: 16
+Total de daño infligido en este combate: 54
+------------------------------
+Combate vs Demonio
+Total de rondas: 3
+Total de daño recibido en este combate: 26
+Total de daño infligido en este combate: 88
+------------------------------
+¡Has ganado! Has derrotado a todos los enemigos y completado la aventura.
