@@ -19,8 +19,19 @@ import java.util.Scanner;
 
         private boolean preguntarInstructivo() {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("¿Desea leer un instructivo antes de jugar? (SI/NO): ");
-            String respuesta = scanner.nextLine().toUpperCase();
+            String respuesta;
+
+            while (true) {
+                System.out.println("¿Desea leer un instructivo antes de jugar? (SI/NO): ");
+                respuesta = scanner.nextLine().toUpperCase();
+
+                if (respuesta.equals("SI") || respuesta.equals("NO")) {
+                    break;
+                } else {
+                    System.out.println("Por favor, ingrese 'SI' o 'NO'.");
+                }
+            }
+
             return respuesta.equals("SI");
         }
 
@@ -32,6 +43,7 @@ import java.util.Scanner;
             System.out.println("1. Bárbaro - Especialista en daño y brutalidad");
             System.out.println("2. Paladin - Guerrero equilibrado especialista en las artes sagradas");
             System.out.println("3. Mago - Enigmático ser especialista en las artes elementales");
+            System.out.println("Gracias al poder del guión, nuestros guerreros atacarán más veces que sus enemigos");
 
             System.out.println("\n---- OBJETIVO ----");
             System.out.println("El objetivo del juego es derrotar a las 4 criaturas que encontrará en las salas de este calabozo.");
@@ -91,9 +103,9 @@ import java.util.Scanner;
             System.out.println("Energía: " + jugador.getEnergia());
             System.out.println("Evasión: " + jugador.getEvasion());
 
-            // Mensaje de advertencia
             System.out.println("\nCopia esta información en un papel, ya que es de vital importancia y no podrás consultarla hasta después de haber elegido un beneficio.");
         }
+
         private void relatoPrimeraSala() {
             System.out.println("\n---- PRIMERA SALA ----");
             System.out.println("Al entrar en la primera sala, te encuentras con una escena macabra.");
@@ -110,46 +122,53 @@ import java.util.Scanner;
         }
 
         public void comenzarJuego() {
-            mostrarBienvenida();
+            boolean jugarOtraVez;
 
-            if (preguntarInstructivo()) {
-                mostrarInformacion();
-            }
+            do {
+                mostrarBienvenida();
 
-            jugador = elegirPersonaje();
-            System.out.println("Guerrero elegido: " + jugador.getNombre() + ".");
-            System.out.println("------------------------------");
-            RegistroPartida.registrarEvento("Guerrero elegido: " + jugador.getNombre() + ".");
-            mostrarEstadisticasPersonaje(jugador);
-
-
-            // Relato de la primera sala
-            relatoPrimeraSala();
-            Criatura[] enemigos = {new Ghoul(), new Esqueleto(), new Fantasma(), new Demonio()};
-
-            for (Criatura enemigo : enemigos) {
-                Combate combate = new Combate(jugador, enemigo);
-                combate.iniciarCombate();
-
-                // Verificar si el jugador está vivo antes de continuar
-                if (jugador.getSalud() <= 0) {
-                    System.out.println("¡Has sido derrotado! Fin del juego.");
-                    return;
+                if (preguntarInstructivo()) {
+                    mostrarInformacion();
                 }
 
-                // Obtener mejora después de derrotar al enemigo
-                obtenerMejoraDespuesEnemigo(jugador, enemigo);
+                jugador = elegirPersonaje();
+                System.out.println("Guerrero elegido: " + jugador.getNombre() + ".");
+                System.out.println("------------------------------");
+                RegistroPartida.registrarEvento("Guerrero elegido: " + jugador.getNombre() + ".");
                 mostrarEstadisticasPersonaje(jugador);
-                //Guerrero.reiniciarContadorHabilidadEspecial();
-                if (jugadorHaPerdido(jugador)) {
-                    RegistroPartida.registrarEvento("¡Has perdido! Tu guerrero ha sido derrotado.");
-                    return; // Terminar el juego
-                }
-            }
 
-            System.out.println("¡Felicidades, has completado el juego!");
-            RegistroPartida.registrarEvento("¡Has ganado! Has derrotado a todos los enemigos y completado la aventura.");
+                relatoPrimeraSala();
+                Criatura[] enemigos = {new Ghoul(), new Esqueleto(), new Fantasma(), new Demonio()};
+
+                for (Criatura enemigo : enemigos) {
+                    Combate combate = new Combate(jugador, enemigo);
+                    combate.iniciarCombate();
+
+                    if (jugador.getSalud() <= 0) {
+                        System.out.println("¡Has sido derrotado! Fin del juego.");
+                        RegistroPartida.registrarEvento("¡Has perdido! Tu guerrero ha sido derrotado.");
+                        break;
+                    }
+
+                    obtenerMejoraDespuesEnemigo(jugador, enemigo);
+                    mostrarEstadisticasPersonaje(jugador);
+                }
+
+                if (jugador.getSalud() > 0) {
+                    System.out.println("¡Felicidades, has completado el juego!");
+                    RegistroPartida.registrarEvento("¡Has ganado! Has derrotado a todos los enemigos y completado la aventura.");
+                    RegistroPartida.registrarEvento("------------------------------");
+                }
+
+                // Preguntar al usuario si desea jugar otra vez
+                jugarOtraVez = preguntarJugarOtraVez();
+
+            } while (jugarOtraVez);
+
+            System.out.println("¡Gracias por jugar! Hasta luego.");
         }
+
+
         private void obtenerMejoraDespuesEnemigo(Guerrero jugador, Criatura enemigo) {
             if (enemigo instanceof Ghoul) {
                 mostrarMensajeDespuesMejoraGhoul(jugador);
@@ -179,42 +198,32 @@ import java.util.Scanner;
         }
 
         void mostrarMensajeDespuesMejoraEsqueleto(Guerrero jugador) {
-            // Mensaje narrativo después de la mejora
+
             System.out.println("Habiéndote colocado la joya, una extraña figura comienza a emerger de los restos de tu difunto compañero.");
 
-            // Mensajes específicos según la clase del jugador
+
             if (jugador instanceof Barbaro) {
                 System.out.println("Es un espíritu, optimista, crees que es el de tu compañero, a quien acabas de liberar del eterno tormento.");
             } else if (jugador instanceof Paladin) {
                 System.out.println("Es un espíritu, optimista, crees que es el de tu compañero, a quien acabas de liberar del eterno tormento.");
             } else if (jugador instanceof Mago) {
                 System.out.println("Es el espíritu de tu compañero mago. Verdaderamente un fastidio, ni muerto muere.");
-
-                // Registrar evento en el log
-                RegistroPartida.registrarEvento("Mejora elegida después de derrotar a un Esqueleto: Anillo que mejora la salud en 10 puntos.");
-                RegistroPartida.registrarEvento("Mensaje narrativo: Habiéndote colocado la joya, una extraña figura comienza a emerger de los restos de tu difunto compañero.");
-                RegistroPartida.registrarEvento("Mensaje específico para Mago: Es el espíritu de tu compañero mago. Verdaderamente un fastidio, ni muerto muere.");
             }
         }
 
         void mostrarMensajeDespuesMejoraFantasma(Guerrero jugador) {
-            // Mensajes específicos según la clase del jugador
+
             if (jugador instanceof Barbaro) {
                 System.out.println("Juntos hasta el final, compañero.");
             } else if (jugador instanceof Paladin) {
                 System.out.println("Que tu luz me guíe, compañero.");
             } else if (jugador instanceof Mago) {
                 System.out.println("Ya no sé cómo deshacerme de ti.");
-
-                // Registrar evento en el log
-                RegistroPartida.registrarEvento("Mejora elegida después de derrotar a un Fantasma: Mejora de ataque.");
-                RegistroPartida.registrarEvento("Mensaje narrativo: El espíritu comienza a rodearte.");
-                RegistroPartida.registrarEvento("Mensaje específico para Mago: Ya no sé cómo deshacerme de ti.");
             }
         }
 
         void mostrarMensajeDespuesMejoraDemonio(Guerrero jugador) {
-            // Mensajes específicos según la clase del jugador
+
             if (jugador instanceof Barbaro) {
                 System.out.println("La fuerza prevalece, siempre.");
             } else if (jugador instanceof Paladin) {
@@ -223,8 +232,11 @@ import java.util.Scanner;
                 System.out.println("Esos cuernos deben valer bien caro.");
             }
         }
-        private boolean jugadorHaPerdido(Guerrero jugador) {
-            return jugador.getSalud() <= 0;
+        private boolean preguntarJugarOtraVez() {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("¿Quieres jugar otra vez? (SI/NO): ");
+            String respuesta = scanner.nextLine().toUpperCase();
+            return respuesta.equals("SI");
         }
 
     }

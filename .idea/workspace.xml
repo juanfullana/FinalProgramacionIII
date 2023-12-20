@@ -6,16 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="286736d0-c7bf-49b8-92af-8f0db217bf49" name="Changes" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resultado_partida.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Criatura.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Elfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Humano.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Jugador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Maquina.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Orco.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Juego/Juego.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Juego/SalidaManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log_combate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Combate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Combate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Barbaro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Barbaro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Guerrero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Guerrero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Mago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Mago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Paladin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/a" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Juan/Desktop/Programacion3"
+    "last_opened_file_path": "C:/Users/Juan/Desktop/Programacion3",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -124,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702391577860</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="a">
+      <option name="closed" value="true" />
+      <created>1702909660659</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702909660659</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

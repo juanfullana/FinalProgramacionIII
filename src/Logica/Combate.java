@@ -60,7 +60,7 @@ public class Combate {
     }
 
     private void mostrarOpcionesCombate() {
-        System.out.println("Opciones de Logica.Combate:");
+        System.out.println("Opciones de Combate:");
         System.out.println("1. Atacar");
         System.out.println("2. Habilidad Especial (Deshabilitada)");
     }
@@ -130,12 +130,7 @@ public class Combate {
     }
 
     private int calcularDano(Criatura atacante, Criatura objetivo) {
-        if (atacante instanceof Barbaro) {
-            Barbaro barbaro = (Barbaro) atacante;
-            return barbaro.calcularDano(objetivo);
-        } else {
             double danoCalculado = (atacante.getAtaque() + 0.5 * atacante.getVelocidad()) - objetivo.getDefensa();
-
             Random random = new Random();
             double probabilidadEvasion = objetivo.getEvasion() / 100.0;
             double resultadoEvasion = random.nextDouble();
@@ -145,7 +140,6 @@ public class Combate {
                 return 0;
             } else {
                 return Math.max(0, (int) danoCalculado);
-            }
         }
     }
 
@@ -292,11 +286,18 @@ public class Combate {
         RegistroPartida.registrarEvento("Total de rondas: " + rondas);
         RegistroPartida.registrarEvento("Total de daño recibido en este combate: " + danioTotalEnemigo);
         RegistroPartida.registrarEvento("Total de daño infligido en este combate: " + danioTotalJugador);
+        if (jugador.getSalud() > 0) {
+            RegistroPartida.registrarEvento("Has derrotado a " + enemigo.getNombre());
+        } else {
+            RegistroPartida.registrarEvento("Has sido derrotado por " + enemigo.getNombre());
+        }
+        RegistroPartida.registrarEvento("Tu salud actual es " + jugador.getSalud());
 
         RegistroPartida.registrarEvento("------------------------------");
 
         rondas = 0;
         danioTotalJugador = 0;
         danioTotalEnemigo = 0;
+
     }
 }

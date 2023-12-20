@@ -1,15 +1,15 @@
 package utnydragones.criaturas;
 
 public class Mago extends Guerrero {
-    private static final int ENERGIA_COSTO_RAYO_HIELO = 30;
+    //private static final int ENERGIA_COSTO_RAYO_HIELO = 30;
     private static final int ENERGIA_GENERADA_ATACAR = 20;
 
     public Mago() {
-        super("Mago", 60, 35, 10, 15, 10, 20, 60);
+        super("Mago", 10, 30, 10, 15, 10, 20, 60);
     }
 
     // Método para realizar la habilidad especial "Machacar"
-    public void Rayo_Hielo(Criatura objetivo) {
+    /*public void Rayo_Hielo(Criatura objetivo) {
         if (getEnergia() >= ENERGIA_COSTO_RAYO_HIELO) {
             int dano = (int) (calcularDano(objetivo) * 1.5);
             objetivo.reducirSalud(dano);
@@ -21,7 +21,7 @@ public class Mago extends Guerrero {
         } else {
             System.out.println(getNombre() + " no tiene suficiente energía para usar la habilidad especial 'Rayo de Hielo'.");
         }
-    }
+    }*/
 
     // Método para usar la habilidad especial
     /*@Override

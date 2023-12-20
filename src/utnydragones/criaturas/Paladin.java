@@ -1,7 +1,7 @@
 package utnydragones.criaturas;
 
 public class Paladin extends Guerrero {
-    private static final int ENERGIA_COSTO_LUZ_DIVINA = 30;
+    //private static final int ENERGIA_COSTO_LUZ_DIVINA = 30;
     private static final int ENERGIA_GENERADA_ATACAR = 20;
 
     public Paladin() {
@@ -9,7 +9,7 @@ public class Paladin extends Guerrero {
     }
 
     // Método para realizar la habilidad especial "Machacar"
-    public void Luz_Divina(Criatura objetivo) {
+    /*public void Luz_Divina(Criatura objetivo) {
         if (getEnergia() >= ENERGIA_COSTO_LUZ_DIVINA) {
             int dano = (int) (calcularDano(objetivo) * 1.5);
             objetivo.reducirSalud(dano);
@@ -21,7 +21,7 @@ public class Paladin extends Guerrero {
         } else {
             System.out.println(getNombre() + " no tiene suficiente energía para usar la habilidad especial 'Luz Divina'.");
         }
-    }
+    }*/
 
     // Método para usar la habilidad especial
     /*@Override

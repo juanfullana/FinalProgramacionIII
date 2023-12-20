@@ -9,7 +9,7 @@ public class Guerrero extends Criatura {
     public Guerrero(String nombre, int salud, int ataque, int defensa, int velocidad, int evasion, Integer energia, int SaludMaxima) {
         super(nombre, salud, ataque, defensa, velocidad, evasion, energia, SaludMaxima);
         this.usandoHabilidadEspecial = false;
-        this.habilidadEspecialUtilizada = false; // Inicializar en false al crear un Guerrero
+        this.habilidadEspecialUtilizada = false;
     }
 
     public boolean isUsandoHabilidadEspecial() {
