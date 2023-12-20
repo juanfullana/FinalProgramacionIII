@@ -234,8 +234,19 @@ import java.util.Scanner;
         }
         private boolean preguntarJugarOtraVez() {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("¿Quieres jugar otra vez? (SI/NO): ");
-            String respuesta = scanner.nextLine().toUpperCase();
+            String respuesta;
+
+            while (true) {
+                System.out.println("¿Quieres jugar de nuevo? (SI/NO): ");
+                respuesta = scanner.nextLine().toUpperCase();
+
+                if (respuesta.equals("SI") || respuesta.equals("NO")) {
+                    break;
+                } else {
+                    System.out.println("Por favor, ingrese 'SI' o 'NO'.");
+                }
+            }
+
             return respuesta.equals("SI");
         }
 
