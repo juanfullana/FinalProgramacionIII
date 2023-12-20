@@ -246,7 +246,6 @@ import java.util.Scanner;
                     System.out.println("Por favor, ingrese 'SI' o 'NO'.");
                 }
             }
-
             return respuesta.equals("SI");
         }
 
