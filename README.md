@@ -1,7 +1,7 @@
-Final de la materia Programación III dictada por Marco Ustarroz
-El juego se trata de una aventura lineal al estilo calabozos y dragones.
-Nos enfrentaremos a 4 criaturas, algunas de las cuales nos dropearan items para mejorar nuestras estadisticas.
-Si bien el poder del guión nos acompaña, la suerte podría no siempre estar de nuestro lado.
+- Final de la materia Programación III dictada por Marco Ustarroz
+- El juego se trata de una aventura lineal al estilo calabozos y dragones.
+- Nos enfrentaremos a 4 criaturas, algunas de las cuales nos dropearan items para mejorar nuestras estadisticas.
+- Si bien el poder del guión nos acompaña, la suerte podría no siempre estar de nuestro lado.
 
 
 COMENTARIOS AL PROFESOR:
