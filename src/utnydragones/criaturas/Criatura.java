@@ -9,7 +9,7 @@ public class Criatura {
     int velocidad;
     protected Integer energia;
     int evasion;
-    private int saludMaxima;
+
 
 
        // Constructor
@@ -53,10 +53,6 @@ public class Criatura {
 
     public int getVelocidad() {
         return velocidad;
-    }
-
-    public void setVelocidad(int velocidad) {
-        this.velocidad = velocidad;
     }
 
     public Integer getEnergia() {
