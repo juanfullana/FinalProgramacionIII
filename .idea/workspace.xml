@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="286736d0-c7bf-49b8-92af-8f0db217bf49" name="Changes" comment="Verions 1.0.4">
+    <list default="true" id="286736d0-c7bf-49b8-92af-8f0db217bf49" name="Changes" comment="Version Final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Combate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Combate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Logica/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Juego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Logica/RegistroPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/RegistroPartida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Barbaro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Barbaro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Criatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Criatura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Demonio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Demonio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Esqueleto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Esqueleto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Fantasma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Fantasma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Ghoul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Ghoul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Guerrero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Guerrero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Mago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Mago.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Paladin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,18 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juan/Desktop/Programacion3&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Juan/Desktop/Programacion3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -77,7 +79,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.21-corretto-11.0.21-8336523bb0d9-d3b62f98" />
+        <option value="jdk-11.0.21-corretto-11.0.21-249ae16d76d6-d0fa0211" />
       </set>
     </attachedChunks>
   </component>
@@ -89,6 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702220250279</updated>
+      <workItem from="1703542000388" duration="358000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <option name="closed" value="true" />
@@ -186,8 +189,27 @@
       <option name="project" value="LOCAL" />
       <updated>1703109631270</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Verions 1.0.4">
+      <option name="closed" value="true" />
+      <created>1703540511308</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703540511309</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Version Final">
+      <option name="closed" value="true" />
+      <created>1703540682357</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703540682357</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -203,6 +225,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
     <MESSAGE value="Verions 1.0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Verions 1.0.4" />
+    <MESSAGE value="Version Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Final" />
   </component>
 </project>

@@ -1,15 +1,19 @@
 package utnydragones.criaturas;
 
 public class Guerrero extends Criatura {
-    private static final int ENERGIA_ATACAR = 20;
     protected static final int ENERGIA_COSTO_HABILIDAD_ESPECIAL = 30;
-    private boolean usandoHabilidadEspecial;
+    private static final int ENERGIA_ATACAR = 20;
     private static boolean habilidadEspecialUtilizada;
+    private boolean usandoHabilidadEspecial;
 
     public Guerrero(String nombre, int salud, int ataque, int defensa, int velocidad, int evasion, Integer energia) {
         super(nombre, salud, ataque, defensa, velocidad, evasion, energia);
         this.usandoHabilidadEspecial = false;
         this.habilidadEspecialUtilizada = false;
+    }
+
+    public static void reiniciarContadorHabilidadEspecial() {
+        habilidadEspecialUtilizada = false;
     }
 
     public boolean isUsandoHabilidadEspecial() {
@@ -20,16 +24,12 @@ public class Guerrero extends Criatura {
         this.usandoHabilidadEspecial = usandoHabilidadEspecial;
     }
 
-    public  boolean isHabilidadEspecialUtilizada() {
+    public boolean isHabilidadEspecialUtilizada() {
         return habilidadEspecialUtilizada;
     }
 
-    public  void setHabilidadEspecialUtilizada(boolean habilidadEspecialUtilizada) {
+    public void setHabilidadEspecialUtilizada(boolean habilidadEspecialUtilizada) {
         Guerrero.habilidadEspecialUtilizada = habilidadEspecialUtilizada;
-    }
-
-    public static void reiniciarContadorHabilidadEspecial() {
-        habilidadEspecialUtilizada = false;
     }
 
     public void reducirEnergia(int cantidad) {

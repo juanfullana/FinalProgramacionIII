@@ -2,17 +2,16 @@ package utnydragones.criaturas;
 
 public class Criatura {
     public static final int ENERGIA_GENERADA_ATACAR = 20;
-    private String nombre;
+    protected Integer energia;
     int salud;
     int ataque;
     int defensa;
     int velocidad;
-    protected Integer energia;
     int evasion;
+    private String nombre;
 
 
-
-       // Constructor
+    // Constructor
     public Criatura(String nombre, int salud, int ataque, int defensa, int velocidad, Integer energia, int evasion) {
         this.nombre = nombre;
         this.salud = salud;

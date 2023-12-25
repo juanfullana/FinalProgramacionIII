@@ -1,8 +1,9 @@
 package Logica;
 
-import java.util.Scanner;
-import java.util.Random;
 import utnydragones.criaturas.*;
+
+import java.util.Random;
+import java.util.Scanner;
 
 public class Combate {
     private final Guerrero jugador;
@@ -130,16 +131,16 @@ public class Combate {
     }
 
     private int calcularDano(Criatura atacante, Criatura objetivo) {
-            double danoCalculado = (atacante.getAtaque() + 0.5 * atacante.getVelocidad()) - objetivo.getDefensa();
-            Random random = new Random();
-            double probabilidadEvasion = objetivo.getEvasion() / 100.0;
-            double resultadoEvasion = random.nextDouble();
+        double danoCalculado = (atacante.getAtaque() + 0.5 * atacante.getVelocidad()) - objetivo.getDefensa();
+        Random random = new Random();
+        double probabilidadEvasion = objetivo.getEvasion() / 100.0;
+        double resultadoEvasion = random.nextDouble();
 
-            if (resultadoEvasion <= probabilidadEvasion) {
-                System.out.println("¡" + objetivo.getNombre() + " ha evadido el ataque!");
-                return 0;
-            } else {
-                return Math.max(0, (int) danoCalculado);
+        if (resultadoEvasion <= probabilidadEvasion) {
+            System.out.println("¡" + objetivo.getNombre() + " ha evadido el ataque!");
+            return 0;
+        } else {
+            return Math.max(0, (int) danoCalculado);
         }
     }
 
