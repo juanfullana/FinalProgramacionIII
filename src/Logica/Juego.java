@@ -5,6 +5,7 @@ import utnydragones.criaturas.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Juego {
@@ -366,11 +367,45 @@ public class Juego {
             } catch (IOException e) {
                 System.out.println("No se pudo abrir el archivo de log.");
             }
+
+            // Preguntar si desea borrar el contenido del archivo
+            preguntarBorrarContenidoLog();
+        }
+    }
+    private void preguntarBorrarContenidoLog() {
+        Scanner scanner = new Scanner(System.in);
+        String respuesta;
+
+        while (true) {
+            System.out.println("¿Desea borrar el contenido del archivo de log? (SI/NO): ");
+            respuesta = scanner.nextLine().toUpperCase();
+
+            if (validarRespuestaSiNo(respuesta)) {
+                break;
+            } else {
+                System.out.println("Por favor, ingrese 'SI' o 'NO'.");
+            }
+        }
+
+        if (respuesta.equals("SI")) {
+            // Lógica para borrar el contenido del log aquí
+            borrarContenidoLog();
+        }
+    }
+
+    private void borrarContenidoLog() {
+        // Lógica para borrar el contenido del archivo de log
+        try (PrintWriter writer = new PrintWriter(RegistroPartida.NOMBRE_ARCHIVO_LOG)) {
+            writer.print("");  // Esto borra el contenido del archivo
+            System.out.println("El contenido del archivo de log ha sido borrado.");
+        } catch (IOException e) {
+            System.out.println("No se pudo borrar el contenido del archivo de log.");
         }
     }
 
     private boolean validarRespuestaSiNo(String respuesta) {
         return respuesta.equals("SI") || respuesta.equals("NO");
     }
+
 
 }
