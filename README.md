@@ -2,7 +2,8 @@
 - El juego se trata de una aventura lineal al estilo calabozos y dragones.
 - Nos enfrentaremos a 4 criaturas, algunas de las cuales nos dropearan items para mejorar nuestras estadisticas.
 - Si bien el poder del guión nos acompaña, la suerte podría no siempre estar de nuestro lado.
-- Cuando decidas dejar de jugar, podrás revisar el archivo de log_combate.txt para analizar tu desempeño.
+- Cuando decidas dejar de jugar, podrás revisar el archivo de log_combate.txt para analizar tu desempeño. Y borrarlo si asi lo deseas.
+  
 
 
 COMENTARIOS AL PROFESOR:
