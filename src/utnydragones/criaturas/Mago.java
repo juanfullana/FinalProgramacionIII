@@ -5,7 +5,7 @@ public class Mago extends Guerrero {
     private static final int ENERGIA_GENERADA_ATACAR = 20;
 
     public Mago() {
-        super("Mago", 60, 30, 10, 15, 10, 20, 60);
+        super("Mago", 60, 30, 10, 15, 10, 20);
     }
 
     // Método para realizar la habilidad especial "Machacar"

@@ -3,18 +3,17 @@ package utnydragones.criaturas;
 public class Criatura {
     public static final int ENERGIA_GENERADA_ATACAR = 20;
     private String nombre;
-    private int salud;
-    private int ataque;
-    private int defensa;
-    private int velocidad;
+    int salud;
+    int ataque;
+    int defensa;
+    int velocidad;
     protected Integer energia;
-    private int evasion;
+    int evasion;
     private int saludMaxima;
 
 
-
-    // Constructor
-    public Criatura(String nombre, int salud, int ataque, int defensa, int velocidad, Integer energia, int evasion, int saludMaxima) {
+       // Constructor
+    public Criatura(String nombre, int salud, int ataque, int defensa, int velocidad, Integer energia, int evasion) {
         this.nombre = nombre;
         this.salud = salud;
         this.ataque = ataque;
@@ -22,7 +21,6 @@ public class Criatura {
         this.velocidad = velocidad;
         this.energia = energia;
         this.evasion = evasion;
-        this.saludMaxima = saludMaxima;
     }
 
     public String getNombre() {
@@ -55,6 +53,10 @@ public class Criatura {
 
     public int getVelocidad() {
         return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
     }
 
     public Integer getEnergia() {

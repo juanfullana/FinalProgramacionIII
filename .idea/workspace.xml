@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="286736d0-c7bf-49b8-92af-8f0db217bf49" name="Changes" comment="a">
+    <list default="true" id="286736d0-c7bf-49b8-92af-8f0db217bf49" name="Changes" comment="Verions 1.0.4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Logica/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/RegistroPartida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/RegistroPartida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Barbaro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Barbaro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Criatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Criatura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Demonio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Demonio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Esqueleto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Esqueleto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Fantasma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Fantasma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Ghoul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Ghoul.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Guerrero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Guerrero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Mago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Mago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utnydragones/criaturas/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utnydragones/criaturas/Paladin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +60,20 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Programacion3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -144,7 +170,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703109502852</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Verions 1.0.4">
+      <option name="closed" value="true" />
+      <created>1703109617892</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703109617892</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Verions 1.0.4">
+      <option name="closed" value="true" />
+      <created>1703109631270</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703109631270</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +202,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
+    <MESSAGE value="Verions 1.0.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verions 1.0.4" />
   </component>
 </project>

@@ -5,7 +5,7 @@ public class Barbaro extends Guerrero {
     private static final int ENERGIA_GENERADA_ATACAR = 20;
 
     public Barbaro() {
-        super("Bárbaro", 100, 20, 8, 10, 10, 20, 70);
+        super("Bárbaro", 100, 20, 8, 10, 10, 20);
     }
 
     // Método para realizar la habilidad especial "Machacar"

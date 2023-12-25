@@ -6,8 +6,8 @@ public class Guerrero extends Criatura {
     private boolean usandoHabilidadEspecial;
     private static boolean habilidadEspecialUtilizada;
 
-    public Guerrero(String nombre, int salud, int ataque, int defensa, int velocidad, int evasion, Integer energia, int SaludMaxima) {
-        super(nombre, salud, ataque, defensa, velocidad, evasion, energia, SaludMaxima);
+    public Guerrero(String nombre, int salud, int ataque, int defensa, int velocidad, int evasion, Integer energia) {
+        super(nombre, salud, ataque, defensa, velocidad, evasion, energia);
         this.usandoHabilidadEspecial = false;
         this.habilidadEspecialUtilizada = false;
     }

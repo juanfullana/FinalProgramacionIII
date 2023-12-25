@@ -5,7 +5,7 @@ public class Paladin extends Guerrero {
     private static final int ENERGIA_GENERADA_ATACAR = 20;
 
     public Paladin() {
-        super("Paladín", 80, 20, 25, 15, 10, 20, 80);
+        super("Paladín", 80, 20, 25, 15, 10, 20);
     }
 
     // Método para realizar la habilidad especial "Machacar"
